@@ -21,8 +21,10 @@
   chroot /root/rootfs/  
     bash-4.2#  
     bash-4.2# yum clean all
+    bash-4.2# du -shx ./*
+    bash-4.2# exit
 
-5. umount之前bind的proc, sys,dev, 然后删除不必要的man帮助文档；  
+6. umount之前bind的proc, sys,dev, 然后删除不必要的man帮助文档；  
   umount -l proc  
   umount -l dev  
   umount -l sys  
@@ -31,10 +33,10 @@
   find . -iname man -exec rm -rf {} \;  
   find . -iname man
 
-6. 最后把/root/rootfs/* 进行压缩打包，生成的bclinux_rootfs.tar.gz就是我们的目标文件  
+7. 最后把/root/rootfs/* 进行压缩打包，生成的bclinux_rootfs.tar.gz就是我们的目标文件  
   tar -czvf bclinux_rootfs.tar.gz   *   
 
-7. 准备dockerfile ,制作base imgge  
+8. 准备dockerfile ,制作base imgge  
   cat dockerfile  
   #This is the dockerfile for base bclinux 8.2  
   FROM scratch  
