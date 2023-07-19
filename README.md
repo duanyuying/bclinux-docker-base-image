@@ -20,9 +20,9 @@
   mount --rbind /sys sys/  
   chroot /root/rootfs/  
     bash-4.2#  
-    bash-4.2# yum clean all
-    bash-4.2# du -shx ./*
-    bash-4.2# exit
+    bash-4.2# yum clean all 
+    bash-4.2# du -shx ./* 
+    bash-4.2# exit 
 
 6. umount之前bind的proc, sys,dev, 然后删除不必要的man帮助文档；  
   umount -l proc  
