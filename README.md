@@ -46,3 +46,5 @@
   docker build -t bclinux82:v1 .  
   docker tag bclinux82:v1 harbor.xxx.com/base_images/bclinux82:v1  
   docker push harbor.xxx.com/base_images/bclinux82:v1  
+
+9. test for submodule
